@@ -603,6 +603,69 @@ pre code {
     max-width: 1140px;
   }
 }
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2.5rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+.skill-mf .progress {
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ff7b00; /* Change yellow to cyan */
+}
+
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff7b00; /* Change text color to cyan */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #0d0d0d; /* Dark background for cursor */
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-cursor {
+  from { width: 5px; }
+  to { width: 0; }
+}
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+  color: #ff7700; /* Cyan color for hover effect */
+}
 
 .container-fluid {
   width: 100%;
@@ -11900,32 +11963,39 @@ textarea.form-control {
   color: #000000;
 }
 
-.ftco-footer-social li {
+.ftco-footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ftco-footer-social li.social-circle {
   list-style: none;
-  margin: 0px 25px 5px 9px;
-  display: inline-block;
+  margin: 0 15px; /* Increased spacing between circles */
+  background-color: #00bfff; /* Set the circle background color */
+  width: 80px; /* Set a medium size for the circle */
+  height: 80px; /* Set a medium size for the circle */
+  border-radius: 50%; /* Makes the background circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
-.ftco-footer-social li a {
-  height: 100px;
-  width: 100px;
-  display: block;
-  float: left;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  position: relative;
+
+.ftco-footer-social li.social-circle a {
+  color: #ffffff; /* Icon color */
+  font-size: 36px; /* Increased icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.ftco-footer-social li a span {
-  position: relative;
-  font-size: 100px;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+
+.ftco-footer-social li.social-circle:hover {
+  background-color: #00a3cc; /* Darker cyan on hover */
 }
-.ftco-footer-social li a:hover {
-  color: #fff;
-}
+
 
 .footer-small-nav > li {
   display: inline-block;
