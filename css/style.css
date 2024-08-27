@@ -12702,3 +12702,45 @@ textarea.form-control {
     stroke-dashoffset: -136px;
   }
 }
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-card {
+  flex: 1 1 calc(48% - 20px); /* Each card takes ~48% width minus margin */
+  margin-bottom: 20px;
+  background: #202020; /* Dark background color */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #ffa500; /* Project title color */
+}
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+.project-card .date {
+  color: #ffa500;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%; /* Full width on small screens */
+  }
+}
